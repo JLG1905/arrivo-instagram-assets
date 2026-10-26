@@ -1,0 +1,231 @@
+<!-- ARRIVO IA · Web principal · bloque único para GHL (Custom code). Fuente: marketing/web/home.html -->
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+.aw{--navy:#0B2447;--blue:#2563EB;--terra:#D97757;--mist:#F5F7FA;--graph:#263238;--line:#DCE3EE;--fh:'Manrope',system-ui,sans-serif;--fb:'Inter',system-ui,sans-serif;font-family:var(--fb);color:var(--graph);background:#fff;line-height:1.55;-webkit-font-smoothing:antialiased}
+.aw *{box-sizing:border-box;margin:0;padding:0}
+.aw a{color:inherit;text-decoration:none}
+.aw img{max-width:100%;display:block}
+.aw .w{max-width:1120px;margin:0 auto;padding:0 24px}
+.aw h1,.aw h2,.aw h3{font-family:var(--fh);color:var(--navy);letter-spacing:-.02em;line-height:1.1}
+.aw .t{color:var(--terra)}
+.aw .k{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:12px}
+.aw h2{font-size:clamp(30px,4.4vw,46px);font-weight:800;margin-bottom:18px}
+.aw .lead{font-size:18px;max-width:640px}
+.aw section{padding:96px 0}
+.aw .btn{display:inline-flex;align-items:center;gap:10px;background:var(--terra);color:#fff;font:700 17px var(--fh);padding:17px 28px;border-radius:999px;transition:.2s;box-shadow:0 10px 30px rgba(217,119,87,.35)}
+.aw .btn:hover{transform:translateY(-2px);background:#c9663f}
+.aw .btn.navy{background:var(--navy);box-shadow:none}
+.aw .lnk{font-weight:600;border-bottom:2px solid currentColor;padding-bottom:2px}
+/* nav */
+.aw nav{position:sticky;top:0;z-index:50;background:rgba(11,36,71,.96);backdrop-filter:blur(8px)}
+.aw nav .w{display:flex;align-items:center;justify-content:space-between;height:70px}
+.aw .logo{display:flex;align-items:center;gap:10px;font:800 21px var(--fh);color:#fff}
+.aw .logo img{height:26px}
+.aw .logo span{color:var(--terra);font-weight:600}
+.aw .menu{display:flex;gap:28px;align-items:center;font-size:15px;color:#C9D6F2}
+.aw .menu a:hover{color:#fff}
+.aw .menu .btn{padding:11px 20px;font-size:15px;color:#fff;box-shadow:none}
+/* hero */
+.aw .hero{position:relative;background:var(--navy) url('https://images.pexels.com/photos/19854768/pexels-photo-19854768.jpeg?auto=compress&cs=tinysrgb&w=1920') center 60%/cover;color:#fff;padding:120px 0 140px;overflow:hidden}
+.aw .hero:before{content:'';position:absolute;inset:0;background:linear-gradient(100deg,rgba(11,36,71,.96) 0%,rgba(11,36,71,.85) 45%,rgba(11,36,71,.35) 100%)}
+.aw .hero .w{position:relative}
+.aw .hero .k{color:#9DB4E8}
+.aw .hero h1{color:#fff;font-size:clamp(42px,6.6vw,76px);font-weight:800;max-width:780px}
+.aw .hero p{font-size:20px;color:#DCE6FA;max-width:620px;margin:24px 0 36px}
+.aw .hero .cta{display:flex;flex-wrap:wrap;align-items:center;gap:22px 28px}
+.aw .hero .lnk{color:#fff}
+.aw .route{position:absolute;right:-40px;bottom:-20px;width:520px;opacity:.95}
+.aw .pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:44px}
+.aw .pills span{font-size:14px;font-weight:600;padding:8px 16px;border:1.5px solid rgba(255,255,255,.25);border-radius:999px;color:#fff}
+/* problema */
+.aw .prob{background:var(--mist)}
+.aw .grid2{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.aw .clock{font:800 120px/1 var(--fh);color:var(--terra);letter-spacing:-.05em}
+.aw .pains{display:grid;gap:14px;margin-top:8px}
+.aw .pain{background:#fff;border-radius:18px;padding:20px 22px;border-left:5px solid var(--terra);box-shadow:0 8px 30px rgba(11,36,71,.06)}
+.aw .pain b{display:block;font:700 18px var(--fh);color:var(--navy);margin-bottom:4px}
+.aw .closing{font:800 24px var(--fh);color:var(--navy);margin-top:28px}
+/* como funciona */
+.aw .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px;counter-reset:s}
+.aw .step{position:relative;background:#fff;border:1.5px solid var(--line);border-radius:20px;padding:28px 24px}
+.aw .step:before{counter-increment:s;content:counter(s,decimal-leading-zero);font:800 15px var(--fh);color:#fff;background:var(--blue);width:40px;height:40px;border-radius:12px;display:grid;place-items:center;margin-bottom:18px}
+.aw .step:last-child:before{background:var(--terra)}
+.aw .step h3{font-size:20px;margin-bottom:8px}
+.aw .chat{background:#EFEAE2;border-radius:24px;padding:22px;display:flex;flex-direction:column;gap:10px;max-width:420px;margin-left:auto;box-shadow:0 20px 60px rgba(11,36,71,.15)}
+.aw .chat .hd{display:flex;align-items:center;gap:10px;font:700 15px var(--fb);color:#111;margin-bottom:6px}
+.aw .chat .av{width:36px;height:36px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font-size:13px}
+.aw .b{font-size:15px;padding:10px 14px;border-radius:16px;max-width:85%;color:#111;box-shadow:0 1px 1px rgba(0,0,0,.08)}
+.aw .b.in{background:#fff;align-self:flex-start;border-top-left-radius:4px}
+.aw .b.out{background:#D9FDD3;align-self:flex-end;border-top-right-radius:4px}
+/* beneficios */
+.aw .ben{background:var(--navy);color:#C9D6F2}
+.aw .ben h2{color:#fff}.aw .ben .k{color:#9DB4E8}
+.aw .bgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:44px}
+.aw .bcard{background:rgba(255,255,255,.05);border:1.5px solid rgba(255,255,255,.12);border-radius:20px;padding:28px}
+.aw .bcard h3{color:#fff;font-size:20px;margin-bottom:8px}
+.aw .bcard i{display:block;width:34px;height:6px;border-radius:3px;background:var(--terra);margin-bottom:18px}
+.aw .bphoto{border-radius:20px;background:url('https://images.pexels.com/photos/39205181/pexels-photo-39205181.jpeg?auto=compress&cs=tinysrgb&w=1200') center/cover;min-height:240px}
+/* incluye */
+.aw .inc{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:start;margin-top:36px}
+.aw .checks{list-style:none;display:grid;gap:14px}
+.aw .checks li{display:flex;gap:14px;font-size:17px;align-items:flex-start}
+.aw .checks li:before{content:'✓';flex:0 0 28px;height:28px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;font-weight:700;font-size:14px;margin-top:1px}
+.aw .pilot{background:var(--blue);color:#E1E9FF;border-radius:24px;padding:36px}
+.aw .pilot h3{color:#fff;font-size:28px;margin-bottom:12px}
+.aw .pilot .big{font:800 64px/1 var(--fh);color:#fff;margin-bottom:6px}
+.aw .pilot .btn{margin-top:24px}
+.aw .note{font-size:15px;color:#5B6B85;margin-top:22px}
+/* compat */
+.aw .compat{background:var(--mist);padding:72px 0}
+.aw .compat .w{display:flex;gap:40px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.aw .compat h2{font-size:clamp(26px,3.4vw,36px);margin-bottom:10px}
+.aw .compat p{max-width:640px;font-size:17px}
+/* quien */
+.aw .who{display:grid;grid-template-columns:.85fr 1.15fr;gap:64px;align-items:center}
+.aw .who .ph{border-radius:24px;overflow:hidden;aspect-ratio:4/5;background:#ccc url('https://guia.arrivoia.com/web/jorge_hero.jpg') center top/cover;box-shadow:0 24px 60px rgba(11,36,71,.18)}
+.aw .who p{font-size:18px;margin-bottom:16px}
+.aw .stats{display:flex;gap:18px;margin:26px 0}
+.aw .stats div{flex:1;border:1.5px solid var(--line);border-radius:18px;padding:18px}
+.aw .stats b{display:block;font:800 40px/1 var(--fh);color:var(--terra)}
+.aw .stats small{font-size:14px;color:#5B6B85}
+.aw .sign{font:800 20px var(--fh);color:var(--navy)}
+/* faq */
+.aw .faq{background:var(--mist)}
+.aw details{background:#fff;border-radius:16px;margin-top:12px;border:1.5px solid var(--line)}
+.aw summary{cursor:pointer;list-style:none;padding:20px 24px;font:700 18px var(--fh);color:var(--navy);display:flex;justify-content:space-between;gap:16px}
+.aw summary::-webkit-details-marker{display:none}
+.aw summary:after{content:'+';color:var(--blue);font-size:24px;line-height:1}
+.aw details[open] summary:after{content:'–'}
+.aw details p{padding:0 24px 22px;font-size:16px}
+/* cierre */
+.aw .end{background:var(--navy);color:#C9D6F2;text-align:center;position:relative;overflow:hidden}
+.aw .end h2{color:#fff;font-size:clamp(34px,5vw,56px)}
+.aw .end p{font-size:19px;max-width:600px;margin:0 auto 34px}
+.aw .end .lnk{color:#fff;display:inline-block;margin-top:22px}
+/* pie */
+.aw footer{background:#081A33;color:#8FA1BF;font-size:14px;padding:40px 0}
+.aw footer .w{display:flex;flex-wrap:wrap;gap:18px 32px;justify-content:space-between;align-items:center}
+.aw footer .lg{display:flex;flex-wrap:wrap;gap:8px 20px}
+.aw footer a:hover{color:#fff}
+@media (max-width:900px){
+ .aw section{padding:72px 0}.aw .menu a:not(.btn){display:none}
+ .aw .grid2,.aw .inc,.aw .who{grid-template-columns:1fr;gap:40px}
+ .aw .steps,.aw .bgrid{grid-template-columns:1fr}
+ .aw .chat{margin:0}.aw .route{width:300px;opacity:.5}
+ .aw .hero{padding:80px 0 110px}.aw .clock{font-size:84px}
+ .aw .who .ph{max-width:380px}
+}
+</style>
+
+<div class="aw">
+<nav><div class="w">
+  <a href="#inicio" class="logo"><img src="https://guia.arrivoia.com/web/isotipo.png" alt="">Arrivo<span>IA</span></a>
+  <div class="menu"><a href="#como">Cómo funciona</a><a href="#incluye">Qué incluye</a><a href="#quien">Quién está detrás</a><a href="#preguntas">Preguntas</a><a class="btn" href="https://cita.arrivoia.com">Reserva 15 min</a></div>
+</div></nav>
+
+<header class="hero" id="inicio"><div class="w">
+  <div class="k">Registro de viajeros para gestoras de viviendas turísticas</div>
+  <h1>Los datos de tus huéspedes, <span class="t">sin perseguir a nadie.</span></h1>
+  <p>En cuanto entra la reserva, conversamos con cada huésped por WhatsApp, en su idioma, y te entregamos sus datos completos en formato oficial, semanas antes de la llegada.</p>
+  <div class="cta"><a class="btn" href="https://cita.arrivoia.com">Reserva tu diagnóstico gratuito · 15 min</a><a class="lnk" href="https://guia.arrivoia.com">o descarga la guía «Las 3 fugas de tu check-in» →</a></div>
+  <div class="pills"><span>Por WhatsApp</span><span>En el idioma de cada huésped</span><span>Sin formularios</span><span>Toda España</span></div>
+</div>
+<svg class="route" viewBox="0 0 1080 400" fill="none"><path d="M-40 380 C 260 330, 560 170, 930 120" stroke="#2563EB" stroke-width="12" stroke-linecap="round"/><circle cx="975" cy="112" r="38" fill="#D97757"/></svg>
+</header>
+
+<section class="prob"><div class="w grid2">
+  <div><div class="k">El problema</div><div class="clock">23:00</div><h2>Tu huésped llega mañana. <span class="t">Y aún no tienes sus datos.</span></h2></div>
+  <div><p class="lead">Si gestionas viviendas turísticas, lo conoces:</p>
+    <div class="pains">
+      <div class="pain"><b>Formularios que nadie rellena</b>Envías el enlace una, dos, tres veces.</div>
+      <div class="pain"><b>Datos que llegan a medias</b>Falta el número de soporte, falta un acompañante.</div>
+      <div class="pain"><b>Huéspedes de medio mundo</b>Cada uno en su idioma y a su hora.</div>
+      <div class="pain"><b>Check-ins que empiezan pidiendo datos en la puerta</b>No es la bienvenida que quieres dar.</div>
+    </div>
+    <p class="closing">Tu equipo no debería pasar las noches mirando el móvil.</p></div>
+</div></section>
+
+<section id="como"><div class="w">
+  <div class="grid2"><div><div class="k">Cómo funciona</div><h2>De la reserva al check-in, <span class="t">sin que tengas que escribir al huésped.</span></h2><p class="lead">Una conversación, no un formulario. Empezamos con la máxima antelación e insistimos con amabilidad hasta tener todo.</p></div>
+  <div class="chat"><div class="hd"><span class="av">CL</span>Casa Llevant</div>
+    <div class="b in">Hi Emma! Your stay on June 14th is confirmed 🌿 To have everything ready, shall we do the check-in now or later?</div>
+    <div class="b out">Now is perfect!</div>
+    <div class="b in">Great! First, your full name?</div>
+    <div class="b out">Emma Taylor</div>
+    <div class="b in">Thanks, Emma! And your passport number?</div></div></div>
+  <div class="steps">
+    <div class="step"><h3>Entra la reserva</h3><p>Aunque falten meses, empezamos ese mismo día.</p></div>
+    <div class="step"><h3>Primer mensaje, en su idioma</h3><p>Le explicamos el check-in por WhatsApp y le preguntamos si prefiere hacerlo ahora o más adelante.</p></div>
+    <div class="step"><h3>Pregunta a pregunta</h3><p>Le pedimos los datos con naturalidad, como lo haría una persona. Sin formularios.</p></div>
+    <div class="step"><h3>¿No responde?</h3><p>Volvemos a escribirle con amabilidad cada 24-48 horas, hasta tener todo.</p></div>
+    <div class="step"><h3>Te llegan los datos completos</h3><p>En formato oficial, listos para tu PMS o para enviar a SES.Hospedajes como ya lo haces.</p></div>
+    <div class="step"><h3>Llega el huésped</h3><p>Y la bienvenida es solo eso: bienvenida.</p></div>
+  </div>
+</div></section>
+
+<section class="ben"><div class="w">
+  <div class="k">Lo que cambia en tu día a día</div><h2>Menos persecución. <span class="t">Más tranquilidad.</span></h2>
+  <div class="bgrid">
+    <div class="bcard"><i></i><h3>Horas de vuelta para tu equipo</h3><p>Nadie persigue huéspedes: lo hacemos nosotros.</p></div>
+    <div class="bcard"><i></i><h3>Datos completos y a tiempo</h3><p>Semanas antes de la llegada, no la noche anterior.</p></div>
+    <div class="bcard"><i></i><h3>Huéspedes mejor atendidos</h3><p>Una conversación amable en su idioma, en lugar de un formulario más.</p></div>
+    <div class="bcard"><i></i><h3>Control y tranquilidad</h3><p>Sabes quién duerme en tus viviendas: si hay un problema con los vecinos, un daño o una emergencia, tienes los datos a mano.</p></div>
+    <div class="bcard"><i></i><h3>Sin cambiar tu forma de trabajar</h3><p>Recibes los datos como ya los usas, en tu PMS o para SES.Hospedajes.</p></div>
+    <div class="bphoto" role="img" aria-label="Huéspedes llegando a una vivienda"></div>
+  </div>
+</div></section>
+
+<section id="incluye"><div class="w">
+  <div class="k">Qué incluye</div><h2>Todo lo que necesitas, <span class="t">sin letra pequeña.</span></h2>
+  <div class="inc">
+    <div><ul class="checks">
+      <li>Conversación por WhatsApp con cada huésped, en su idioma.</li>
+      <li>Configuración con tus mensajes, tu tono y tus idiomas.</li>
+      <li>Recordatorios a los huéspedes que no responden.</li>
+      <li>Entrega de los datos completos en formato oficial.</li>
+      <li>Informe mensual.</li>
+      <li>Mensajería de WhatsApp incluida en la cuota.</li>
+      <li>Soporte de lunes a sábado de 8:00 a 16:00, con respuesta en menos de 2 horas, y urgencias en cualquier horario.</li>
+    </ul><p class="note">¿Usas un PMS? Si tu proveedor lo permite, también podemos conectar nuestro sistema con él.</p></div>
+    <div class="pilot"><div class="big">30 días</div><h3>Empieza con un piloto.</h3><p>Pruébalo con hasta 10 viviendas durante 30 días y comprueba los resultados antes de decidir. Te lo explicamos en el diagnóstico.</p><a class="btn navy" href="https://cita.arrivoia.com">Reserva tu diagnóstico</a></div>
+  </div>
+</div></section>
+
+<div class="compat"><div class="w"><div><h2>No sustituimos tus herramientas. <span class="t">Las completamos.</span></h2><p>Si ya usas Chekin u otro sistema de check-in, perfecto: ellos envían el parte; nosotros conseguimos que el huésped dé sus datos. Lo comprobamos contigo en el diagnóstico.</p></div><a class="btn" href="https://cita.arrivoia.com">Hablemos 15 minutos</a></div></div>
+
+<section id="quien"><div class="w who">
+  <div class="ph" role="img" aria-label="Jorge, fundador de Arrivo"></div>
+  <div><div class="k">Quién está detrás</div><h2>Durante años, <span class="t">yo también perseguí a huéspedes.</span></h2>
+    <p>Soy Jorge. Empecé en recepción en Bariloche, en la Patagonia argentina, y llegué a dirigir un apartahotel con cabañas y una cafetería.</p>
+    <div class="stats"><div><b>+20</b><small>años en operaciones de alojamiento</small></div><div><b>~50</b><small>personas en el equipo</small></div></div>
+    <p>Esa experiencia me enseñó algo: los huéspedes no rellenan formularios, pero responden a una conversación. Hoy vivo en Palma y he diseñado este sistema a partir de ello.</p>
+    <p class="sign">Y conmigo hablas directamente. Sin centralitas.</p></div>
+</div></section>
+
+<section class="faq" id="preguntas"><div class="w" style="max-width:860px">
+  <div class="k">Preguntas frecuentes</div><h2>Lo que suelen preguntarnos</h2>
+  <details><summary>¿Tengo que cambiar mi PMS o mi sistema de check-in?</summary><p>No. Te entregamos los datos en formato oficial para que los uses como ya lo haces.</p></details>
+  <details><summary>¿Enviáis vosotros el parte a SES.Hospedajes?</summary><p>No. Te entregamos los datos completos y tú los envías como siempre, normalmente desde tu PMS.</p></details>
+  <details><summary>¿Y si el huésped no contesta?</summary><p>Le volvemos a escribir con amabilidad cada 24-48 horas hasta tener todos los datos.</p></details>
+  <details><summary>¿En qué idiomas?</summary><p>En el idioma de cada huésped.</p></details>
+  <details><summary>¿Pedís foto del DNI o del pasaporte?</summary><p>No. Pedimos solo los datos obligatorios, uno a uno. La Agencia Española de Protección de Datos no permite pedir copias del documento.</p></details>
+  <details><summary>¿Cuánto cuesta?</summary><p>Depende del número de viviendas. Te lo explicamos en el diagnóstico y puedes empezar con un piloto de 30 días.</p></details>
+  <details><summary>¿Cuánto tarda en estar funcionando?</summary><p>Unos 7 días desde que hablamos de tu operativa y tus mensajes.</p></details>
+  <details><summary>¿Trabajáis fuera de Baleares?</summary><p>Sí, en toda España.</p></details>
+</div></section>
+
+<section class="end"><div class="w">
+  <h2>Esta noche, a las 23:00, <span class="t">descansa.</span></h2>
+  <p>Reserva 15 minutos. Revisamos cómo gestionas hoy el registro de viajeros y te enseñamos cómo lo hacemos nosotros.</p>
+  <a class="btn" href="https://cita.arrivoia.com">Reserva tu diagnóstico gratuito</a><br>
+  <a class="lnk" href="https://guia.arrivoia.com">o descarga la guía «Las 3 fugas de tu check-in»</a>
+</div>
+<svg class="route" style="left:-60px;right:auto;bottom:-40px;transform:scaleX(-1)" viewBox="0 0 1080 400" fill="none"><path d="M-40 380 C 260 330, 560 170, 930 120" stroke="#2563EB" stroke-width="12" stroke-linecap="round" opacity=".6"/><circle cx="975" cy="112" r="38" fill="#D97757"/></svg>
+</section>
+
+<footer><div class="w">
+  <div><b style="color:#fff">Arrivo IA</b> · Cada huésped, de la reserva a la reseña · Palma de Mallorca</div>
+  <div class="lg"><a href="mailto:jorge@arrivoia.com">jorge@arrivoia.com</a><a href="https://www.instagram.com/arrivoia/">Instagram</a><a href="/aviso-legal">Aviso legal</a><a href="/privacidad">Privacidad</a><a href="/cookies">Cookies</a></div>
+</div></footer>
+</div>
